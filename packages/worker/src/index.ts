@@ -2,11 +2,16 @@ import { DomainRouterBuilder, domainRoutersHandler, type Env } from '@affine/uti
 
 import { AFFiNEWorker } from './affine.js';
 
-const WORKER_DOMAIN = 'affine-worker.toeverything.workers.dev';
+const WORKER_DOMAIN1 = 'affine.bykevin.work';
+const WORKER_DOMAIN2 = 'affine-worker.rexprimeadam.workers.dev';
 
 const affine = AFFiNEWorker();
 
-const routers = DomainRouterBuilder.create<Env>().add('localhost', '/api/', affine).add(WORKER_DOMAIN, '/api/', affine).build();
+const routers = DomainRouterBuilder.create<Env>()
+  .add('localhost', '/api/', affine)
+  .add(WORKER_DOMAIN1, '/api/', affine)
+  .add(WORKER_DOMAIN2, '/api/', affine)
+  .build();
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {

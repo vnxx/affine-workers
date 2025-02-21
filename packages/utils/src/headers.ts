@@ -1,13 +1,14 @@
 type OriginRule = string | RegExp | ((origin: string) => boolean);
 
 const ALLOW_ORIGIN: OriginRule[] = [
-  'https://affine.pro',
-  'https://app.affine.pro',
-  'https://insider.affine.pro',
-  'https://affine.fail',
-  'https://try-blocksuite.vercel.app',
+  // 'https://affine.pro',
+  // 'https://app.affine.pro',
+  // 'https://insider.affine.pro',
+  // 'https://affine.fail',
+  // 'https://try-blocksuite.vercel.app',
+  'https://affine.bykevin.work',
   /https?:\/\/localhost(:\d+)/,
-  /https:\/\/.*?-toeverything\.vercel\.app$/,
+  // /https:\/\/.*?-toeverything\.vercel\.app$/,
 ];
 
 function isString(s: OriginRule): s is string {
