@@ -4,8 +4,8 @@ compatibility_date = "2023-11-21"
 workers_dev = true
 minify = true
 
-[limits]
-cpu_ms = 500
+# [limits]
+# cpu_ms = 500
 
 [observability]
 enabled = true
