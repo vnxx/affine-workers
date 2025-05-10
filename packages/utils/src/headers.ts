@@ -6,6 +6,7 @@ const ALLOW_ORIGIN: OriginRule[] = [
   // 'https://insider.affine.pro',
   // 'https://affine.fail',
   // 'https://try-blocksuite.vercel.app',
+  '',
   'https://affine.bykevin.work',
   /https?:\/\/localhost(:\d+)/,
   // /https:\/\/.*?-toeverything\.vercel\.app$/,
